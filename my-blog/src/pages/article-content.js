@@ -1,5 +1,6 @@
 const articles = [
   {
+    id: 0,
     name: 'learn-react',
     title: 'The Fastest Way to Learn React',
     content: [
@@ -25,6 +26,7 @@ const articles = [
     ],
   },
   {
+    id: 1,
     name: 'learn-node',
     title: 'How to Build a Node Server in 10 Minutes',
     content: [
@@ -50,6 +52,7 @@ const articles = [
     ],
   },
   {
+    id: 2,
     name: 'my-thoughts-on-resumes',
     title: 'My Thoughts on Resumes',
     content: [

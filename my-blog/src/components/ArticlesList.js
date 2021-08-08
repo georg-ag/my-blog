@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const ArticlesList = ({ articles }) => (
   <>
     {articles.map((article) => (
-      <Link className="article-list-item" to={`/article/${article.name}`}>
+      <Link key={article.id} className="article-list-item" to={`/article/${article.name}`}>
         <h3>{article.title}</h3>
         <p>{article.content[0].substring(0, 150)}...</p>
       </Link>
@@ -13,7 +13,12 @@ const ArticlesList = ({ articles }) => (
   </>
 );
 ArticlesList.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.string).isRequired,
+  articles: PropTypes.arrayOf(
+    PropTypes.shape({ title: PropTypes.string, content: PropTypes.arrayOf(PropTypes.string) }),
+  ),
+};
+ArticlesList.defaultProps = {
+  articles: [],
 };
 
 export default ArticlesList;
