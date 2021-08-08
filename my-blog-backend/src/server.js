@@ -43,7 +43,7 @@ app.post('/api/articles/:name/upvote', async (req, res) => {
   }, res);
 });
 
-app.post('/api/articloes/:name/add-comment', async (req, res) => {
+app.post('/api/articles/:name/add-comment', async (req, res) => {
   const { username, text } = req.body;
   const articleName = req.params.name;
 
