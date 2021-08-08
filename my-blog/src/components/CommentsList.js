@@ -17,10 +17,7 @@ const CommentsList = ({ comments }) => (
 CommentsList.propTypes = {
   comments: PropTypes.arrayOf(
     PropTypes.shape({ username: PropTypes.string, text: PropTypes.string }),
-  ),
-};
-CommentsList.defaultProps = {
-  comments: [],
+  ).isRequired,
 };
 
 export default CommentsList;

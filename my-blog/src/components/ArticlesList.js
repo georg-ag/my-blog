@@ -15,10 +15,7 @@ const ArticlesList = ({ articles }) => (
 ArticlesList.propTypes = {
   articles: PropTypes.arrayOf(
     PropTypes.shape({ title: PropTypes.string, content: PropTypes.arrayOf(PropTypes.string) }),
-  ),
-};
-ArticlesList.defaultProps = {
-  articles: [],
+  ).isRequired,
 };
 
 export default ArticlesList;
